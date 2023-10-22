@@ -12,9 +12,9 @@ public class SeguridadController:ControllerBase
     }
     
     [HttpPost("Login")]
-    public IActionResult IniciarSesion(User user)
+    public async Task<IActionResult> IniciarSesion(User user)
     {   
-        var result = _loginService.Login(user);
-        return  Ok(true);
+        var result = await _loginService.Login(user);
+        return  Ok(result);
     }
 }

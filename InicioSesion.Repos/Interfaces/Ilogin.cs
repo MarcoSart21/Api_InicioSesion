@@ -1,7 +1,8 @@
+
 namespace InicioSesion.Repos.Interfaces
 {
     public interface Ilogin
     {
-        bool Login(User user);
+       Task<bool> Login(User user);
     }
 }
