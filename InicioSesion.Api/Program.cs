@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 //Inyeccion de Dependecias
 builder.Services.AddTransient<Ilogin, LoginService>();
 
+//Obtener CadenaConexion
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
