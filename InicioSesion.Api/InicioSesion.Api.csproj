@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InicioSesion.Helpers\InicioSesion.Helpers.csproj" />
     <ProjectReference Include="..\InicioSesion.Repos\InicioSesion.Repos.csproj" />
   </ItemGroup>
 

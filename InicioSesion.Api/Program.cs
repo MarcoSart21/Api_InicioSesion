@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<Ilogin, LoginService>();
 
 //Obtener CadenaConexion
+ValoresEstaticos.ConexionDB=builder.Configuration.GetConnectionString("CadenaConexion");
 
 
 var app = builder.Build();
