@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 //Inyeccion de Dependecias
 builder.Services.AddTransient<Ilogin, LoginService>();
-builder.Services.AddTransient<GatoFractalDBConext>();
+builder.Services.AddTransient<GatoFractalDBContext>();
 
 //Obtener CadenaConexion
 ValoresEstaticos.ConexionDB=builder.Configuration.GetConnectionString("CadenaConexion");

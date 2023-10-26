@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 public class SeguridadController:ControllerBase
 {
     readonly Ilogin _loginService;
+    readonly GatoFractalDBContext _GatoFractalDBContext;
     
     public SeguridadController(Ilogin login)
     {

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-public class GatoFractalDBConext:DbContext
+public class GatoFractalDBContext:DbContext
 {
     public virtual DbSet<Usuarios>? Usuarios {get;set;}
 
