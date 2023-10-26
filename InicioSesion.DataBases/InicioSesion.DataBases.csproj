@@ -3,11 +3,11 @@
   <ItemGroup>
     <ProjectReference Include="..\InicioSesion.Models\InicioSesion.Models.csproj" />
     <ProjectReference Include="..\InicioSesion.Helpers\InicioSesion.Helpers.csproj" />
-
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLServer" Version="7.0.13" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 

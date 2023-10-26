@@ -1,13 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <ItemGroup>
-      <ProjectReference Include="..\InicioSesion.Models\InicioSesion.Models.csproj" />
-      <ProjectReference Include="..\InicioSesion.DataBases\InicioSesion.DataBases.csproj" />
-      <ProjectReference Include="..\InicioSesion.Repos\InicioSesion.Repos.csproj" />
-
-    </ItemGroup>
-
-
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
