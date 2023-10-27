@@ -1,20 +1,15 @@
 using System.Data.SqlClient;
-using InicioSesion.Repos.Interfaces;
+using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 
 public class LoginService : Ilogin
 {
-    public async Task<bool> Login(User user)
-    {   
-        // using (var conexion = new SqlConnection(ValoresEstaticos.ConexionDB))
-        // {
-        //     await conexion.OpenAsync();
-
-        //     SqlCommand cmd = new SqlCommand();
-        //     cmd.CommandText="[dbo].[ProcedimientoUsuarios]";    
-        // }
-
+    //public async Task<bool> Login(User user)
+    //{
 
     //Logica de la Conexion a la Base de Datos
+
+    /* Metodo Largo---
     bool resultado=false;
         using (var conexion = new SqlConnection(ValoresEstaticos.ConexionDB))
         {
@@ -36,11 +31,11 @@ public class LoginService : Ilogin
                     if(lectura.Read())
                     {   
                         resultado = true;
-                        /*
-                        Resultado.IdEmpleado = lectura.GetGuid(0);
-                        Resultado.Nombre = lectura.GetGuid(1);
-                        Resultado.Nombre = lectura.GetGuid(2);
-                        */
+                        
+                        //Resultado.IdEmpleado = lectura.GetGuid(0);
+                        //Resultado.Nombre = lectura.GetGuid(1);
+                        //Resultado.Nombre = lectura.GetGuid(2);
+                        
                     }else
                     {
                        resultado=false;
@@ -55,6 +50,29 @@ public class LoginService : Ilogin
         }
 
         return resultado;
+
+        
     }
-    
+    Termina metodo largo */
+    public async Task<bool> Login(User user)
+    {
+  
+        using (var conexion = new GatoFractalDBContext())
+        {
+            //Consultas LINQ
+            var consulta = await(from c in conexion.Usuarios
+            where c.Nombre==user.UserName && c.Contrasena==user.Password
+            select c).FirstOrDefaultAsync();
+
+            if (consulta != null)
+            {
+                return true;
+            }else{
+                return false;
+            }
+       
+        }
+        
+
+    }
 }

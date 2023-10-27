@@ -3,7 +3,6 @@
   <ItemGroup>
     <ProjectReference Include="..\InicioSesion.Models\InicioSesion.Models.csproj" />
     <ProjectReference Include="..\InicioSesion.DataBases\InicioSesion.DataBases.csproj" />
-    <ProjectReference Include="..\InicioSesion.Helpers\InicioSesion.Helpers.csproj" />
 
   </ItemGroup>
 

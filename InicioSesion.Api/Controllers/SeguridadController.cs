@@ -1,10 +1,10 @@
-using InicioSesion.Repos.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+[ApiController]
+[Route("Api/Seguridad")]
 public class SeguridadController:ControllerBase
 {
     readonly Ilogin _loginService;
-    readonly GatoFractalDBContext _GatoFractalDBContext;
     
     public SeguridadController(Ilogin login)
     {
@@ -13,8 +13,9 @@ public class SeguridadController:ControllerBase
     }
     
     [HttpPost("Login")]
-    public async Task<IActionResult> IniciarSesion(User user)
+    public async Task<IActionResult> Login(User user)
     {   
+    
         var result = await _loginService.Login(user);
         return  Ok(result);
     }

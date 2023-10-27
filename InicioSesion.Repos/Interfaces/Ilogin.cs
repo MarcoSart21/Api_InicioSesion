@@ -1,8 +1,4 @@
-
-namespace InicioSesion.Repos.Interfaces
-{
-    public interface Ilogin
+public interface Ilogin
     {
        Task<bool> Login(User user);
     }
-}

@@ -1,5 +1,3 @@
-using InicioSesion.Repos.Interfaces;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,8 +12,7 @@ builder.Services.AddTransient<Ilogin, LoginService>();
 builder.Services.AddTransient<GatoFractalDBContext>();
 
 //Obtener CadenaConexion
-ValoresEstaticos.ConexionDB=builder.Configuration.GetConnectionString("CadenaConexion");
-
+ValoresEstaticos.ConexionDB=builder.Configuration.GetConnectionString("CadenaConexion")??"";
 
 var app = builder.Build();
 

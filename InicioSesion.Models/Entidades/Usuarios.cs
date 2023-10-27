@@ -1,6 +1,9 @@
+using System.ComponentModel.DataAnnotations;
+
 public class Usuarios
-{
-    public int IdEmpleado { get; set; }
+
+{[Key]
+    public int IdUsuarios { get; set; }
     public string? Nombre { get; set; }
     public string? Apellidos { get; set; }
     public string? Gametag { get; set; }
