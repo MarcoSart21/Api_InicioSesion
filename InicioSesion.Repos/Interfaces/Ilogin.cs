@@ -1,4 +1,4 @@
 public interface Ilogin
-    {
-       Task<bool> Login(User user);
-    }
+{
+   Task<bool> Login(User user);
+}

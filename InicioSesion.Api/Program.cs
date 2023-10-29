@@ -8,7 +8,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Inyeccion de Dependecias
-builder.Services.AddTransient<Ilogin, LoginService>();
+//builder.Services.AddTransient<Ilogin, LoginService>();
+
+builder.Services.AddTransient<Iusuarios, UsuarioService>();
 builder.Services.AddTransient<GatoFractalDBContext>();
 
 //Obtener CadenaConexion

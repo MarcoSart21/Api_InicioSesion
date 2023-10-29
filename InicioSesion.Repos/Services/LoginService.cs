@@ -4,12 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 public class LoginService : Ilogin
 {
-    //public async Task<bool> Login(User user)
-    //{
 
-    //Logica de la Conexion a la Base de Datos
+    public async Task<bool> Login(User user)
+    {
 
-    /* Metodo Largo---
+    
     bool resultado=false;
         using (var conexion = new SqlConnection(ValoresEstaticos.ConexionDB))
         {
@@ -53,8 +52,9 @@ public class LoginService : Ilogin
 
         
     }
-    Termina metodo largo */
-    
+ 
+
+    /*
     public async Task<bool> Login(User user)
     {
   
@@ -76,4 +76,6 @@ public class LoginService : Ilogin
         
 
     }
+    */
+    
 }

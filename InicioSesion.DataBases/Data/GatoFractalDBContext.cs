@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 public partial class GatoFractalDBContext:DbContext
 {
-    public virtual DbSet<Usuarios>? Usuarios {get;set;}
+    public virtual DbSet<Usuarios> Usuarios {get;set;}
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
