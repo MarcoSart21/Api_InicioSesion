@@ -13,7 +13,7 @@ public partial class GatoFractalDBContext:DbContext
                 builer.EnableRetryOnFailure(5,TimeSpan.FromSeconds(10),null);
             });  
         }
-            }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

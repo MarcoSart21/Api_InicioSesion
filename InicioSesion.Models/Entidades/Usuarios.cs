@@ -10,5 +10,8 @@ public class Usuarios
     public string? Correo { get; set; } 
     public string? Contrasena { get; set; }
     public string? Genero { get; set; } 
+    public int IdPuntuacion { get; set; }
+    public int IdTipoUsuario { get; set; }
+    public int IdRango { get; set; }
 
 }
