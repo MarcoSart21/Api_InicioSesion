@@ -10,6 +10,7 @@ public partial class GatoFractalDBContext:DbContext
 
     public virtual DbSet<HistorialPartidas> HistorialPartidas {get; set;}
 
+    public virtual DbSet<Puntuaciones> Puntuaciones {get;set;}
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -34,7 +35,7 @@ public partial class GatoFractalDBContext:DbContext
 
         modelBuilder.Entity<TipoUsuario>()
         .HasKey(b=>b.IdTipoUsuario)
-        .HasName("PrimaryKey_IdTitpoUsuario");
+        .HasName("PrimaryKey_IdTipoUsuario");
         
         base.OnModelCreating(modelBuilder);
 
@@ -49,6 +50,12 @@ public partial class GatoFractalDBContext:DbContext
         modelBuilder.Entity<HistorialPartidas>()
         .HasKey(b=>b.IdHistorial)
         .HasName("PrimaryKey_IdHistorial");
+        
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Puntuaciones>()
+        .HasKey(b=>b.IdPuntuaciones)
+        .HasName("PrimaryKey_IdPuntuaciones");
         
         base.OnModelCreating(modelBuilder);
 
