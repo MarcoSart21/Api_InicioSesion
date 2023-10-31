@@ -44,9 +44,11 @@ public class UsuarioService : Iusuarios
                 consulta.Correo = usua.Correo;
                 consulta.Contrasena = usua.Contrasena;
                 consulta.Genero = usua.Genero;
+                consulta.IdTipoUsuario = usua.IdTipoUsuario;
+                consulta.IdRango = usua.IdRango;
             }
           
-            var resultado=  await conexion.SaveChangesAsync();
+            var resultado = await conexion.SaveChangesAsync();
             if(resultado==1)
             {
                 return true;

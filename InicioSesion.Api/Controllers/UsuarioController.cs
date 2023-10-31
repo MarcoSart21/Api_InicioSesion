@@ -19,8 +19,8 @@ public class UsuarioController:ControllerBase
         return Ok(result);
     }
     
-    [HttpPost("IniciarSesion")]
-    public async Task<IActionResult> IniciarSesion(Usuarios usuario)
+    [HttpPost("Agregar")]
+    public async Task<IActionResult> Agregar(Usuarios usuario)
     {   
         var result = await _UsuarioService.Agregar(usuario);
         return  Ok(result);
