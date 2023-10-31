@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("Api/TipoUsuario")]
+[Route("Api/Tipos de Usuario")]
 public class TipoController:ControllerBase
 {
     readonly ITipo _TipoService;

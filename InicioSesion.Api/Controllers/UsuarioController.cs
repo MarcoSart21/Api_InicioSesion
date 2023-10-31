@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("Api/Usuario")]
+[Route("Api/Usuarios")]
 public class UsuarioController:ControllerBase
 {
     readonly Iusuarios _UsuarioService;
