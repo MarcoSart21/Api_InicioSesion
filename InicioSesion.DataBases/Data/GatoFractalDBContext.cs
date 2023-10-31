@@ -4,6 +4,8 @@ public partial class GatoFractalDBContext:DbContext
 {
     public virtual DbSet<Usuarios> Usuarios {get;set;}
 
+    public virtual DbSet<TipoUsuario> TipoUsuario {get; set;}
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
@@ -21,6 +23,12 @@ public partial class GatoFractalDBContext:DbContext
         modelBuilder.Entity<Usuarios>()
         .HasKey(b=>b.IdUsuarios)
         .HasName("PrimaryKey_IdUsuario");
+        
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<TipoUsuario>()
+        .HasKey(b=>b.IdTipoUsuario)
+        .HasName("PrimaryKey_IdTitpoUsuario");
         
         base.OnModelCreating(modelBuilder);
     }

@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddTransient<Ilogin, LoginService>();
 
 builder.Services.AddTransient<Iusuarios, UsuarioService>();
+builder.Services.AddTransient<ITipo, TipoService>();
 builder.Services.AddTransient<GatoFractalDBContext>();
 
 //Obtener CadenaConexion

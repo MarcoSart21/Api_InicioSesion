@@ -1,8 +1,8 @@
 public interface Iusuarios
 {
-    Task<List<Usuarios>> Consultar();
+    Task<List<Usuarios>>Consultar();
 
-    Task<bool> Agregar(Usuarios usua);
+    Task<bool>Agregar(Usuarios usua);
 
     Task<bool>Actualizar(Usuarios usua);
 

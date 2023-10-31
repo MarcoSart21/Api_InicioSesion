@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
 public class Usuarios
-
-{[Key]
+{
+    [Key]
     public int IdUsuarios { get; set; }
     public string? Nombre { get; set; }
     public string? Apellidos { get; set; }
