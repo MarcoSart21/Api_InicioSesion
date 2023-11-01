@@ -14,6 +14,8 @@ builder.Services.AddTransient<Iusuarios, UsuarioService>();
 builder.Services.AddTransient<ITipo, TipoService>();
 builder.Services.AddTransient<IRango, RangoService>();
 builder.Services.AddTransient<IHistorial, HistorialService>();
+builder.Services.AddTransient<IPuntuaciones, PuntuacionesService>();
+
 
 builder.Services.AddTransient<GatoFractalDBContext>();
 

@@ -35,9 +35,7 @@ public class PuntuacionesService : IPuntuaciones
             where c.IdPuntuaciones==puntuaciones.IdPuntuaciones select c).FirstOrDefault();
             if(consulta!=null)
             {
-                consulta.Victorias = puntuaciones.Victorias;
-                consulta.Derrotas = puntuaciones.Derrotas;
-                consulta.Empates = puntuaciones.Empates;
+                consulta.Puntos = puntuaciones.Puntos;
                 consulta.IdUsuarios = puntuaciones.IdUsuarios;
 
             }

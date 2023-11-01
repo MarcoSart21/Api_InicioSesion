@@ -2,7 +2,7 @@ public interface IPuntuaciones
 {
     Task<List<Puntuaciones>> Consultar();
 
-    Task<bool> Agregar(Puntuaciones puntuaciones);
+    Task<bool>Agregar(Puntuaciones puntuaciones);
 
     Task<bool>Actualizar(Puntuaciones puntuaciones);
 
