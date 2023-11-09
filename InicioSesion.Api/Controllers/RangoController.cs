@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("Api/Tipo de Rangos")]
+[Route("Api/TipodeRangos")]
 public class RangoController:ControllerBase
 {
     readonly IRango _Rango;
